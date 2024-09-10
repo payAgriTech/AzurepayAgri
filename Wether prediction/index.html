@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayAgri Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="logo.png" alt="Company Logo" class="logo"> <!-- Logo Image -->
+    
+    <div class="container">
+        <header>
+            <h1>PayAgri Weather</h1>
+            <div class="search-box">
+                <input type="text" id="location" placeholder="Enter location">
+                <button id="getWeather">Get Weather</button>
+                <button id="getLocation">Use Current Location</button>
+            </div>
+        </header>
+
+        <div class="location-container">
+            <div class="location-box" onclick="getWeather('Chennai')">
+                <i class="fas fa-map-marker-alt"></i> Chennai
+            </div>
+            <div class="location-box" onclick="getWeather('Erode')">
+                <i class="fas fa-map-marker-alt"></i> Erode
+            </div>
+            <div class="location-box" onclick="getWeather('Theni')">
+                <i class="fas fa-map-marker-alt"></i> Theni
+            </div>
+            <div class="location-box" onclick="getWeather('Salem')">
+                <i class="fas fa-map-marker-alt"></i> Salem
+            </div>
+        </div>
+
+        <main>
+            <section id="currentWeather">
+                <div class="current">
+                    <h2>Current Weather</h2>
+                    <div class="current-temp" id="currentTemp"></div>
+                    <div class="current-description" id="currentDescription"></div>
+                    <div class="current-date" id="currentDate"></div>
+                    <div class="current-location" id="currentLocation"></div>
+                </div>
+            </section>
+            <section id="forecast">
+                <h2>5 Days Forecast</h2>
+                <div id="forecastContent" class="forecast-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
